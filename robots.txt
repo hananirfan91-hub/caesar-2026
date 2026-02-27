@@ -1,0 +1,113 @@
+# robots.txt for César 2026 Website
+# https://cesar2026/
+# Created: February 28, 2026
+
+# -------------------- USER-AGENT RULES --------------------
+
+# Allow all major search engines (Google, Bing, Yahoo, etc.)
+User-agent: *
+Allow: /
+
+# -------------------- DISALLOW RULES --------------------
+
+# Disallow admin and system directories (if any)
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /includes/
+Disallow: /tmp/
+Disallow: /temp/
+
+# Disallow duplicate content and parameter-based URLs
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /*print*
+Disallow: /*preview*
+Disallow: /*nocache*
+
+# Disallow thank you pages and form submissions
+Disallow: /merci/
+Disallow: /confirmation/
+Disallow: /formulaire-soumission/
+
+# Disallow search results pages (if any)
+Disallow: /recherche/
+Disallow: /search/
+
+# -------------------- CRAWL DELAY (for polite crawling) --------------------
+
+# Recommended for all bots to avoid server overload
+Crawl-delay: 2
+
+# -------------------- SPECIFIC BOT RULES --------------------
+
+# Googlebot specific rules
+User-agent: Googlebot
+Allow: /
+Allow: /*.html$
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Disallow: /*.pdf$  # PDFs are still accessible but won't be indexed if preferred
+
+# Googlebot-Image specific rules (allow all images)
+User-agent: Googlebot-Image
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Disallow: /admin/
+
+# Googlebot-Video specific rules
+User-agent: Googlebot-Video
+Allow: /*.mp4$
+Allow: /*.webm$
+Allow: /*.ogg$
+Allow: /videos/
+
+# Bingbot specific rules
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Yandex specific rules
+User-agent: Yandex
+Allow: /
+Crawl-delay: 3
+Allow: /images/
+
+# Baidu specific rules
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+# Twitterbot (for card rendering)
+User-agent: Twitterbot
+Allow: /
+
+# Facebook crawler (for Open Graph)
+User-agent: facebookexternalhit
+Allow: /
+
+# -------------------- SITEMAP LOCATION --------------------
+
+# Tell search engines where to find the sitemap
+Sitemap: https://cesar2026/sitemap.xml
+
+# -------------------- COMMENTED RULES (for future use) --------------------
+
+# Disallow specific folders if they exist in the future
+# Disallow: /private/
+# Disallow: /draft/
+# Disallow: /old-version/
+
+# -------------------- HOST (optional) --------------------
+
+# Specify the preferred domain (use only if needed)
+# Host: cesar2026

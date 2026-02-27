@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>César 2026 - Palmarès Complet, Analyses et Nominations</title>
+    <meta name="description" content="Découvrez le palmarès complet des César 2026. Analyses exclusives des films, réalisateurs, acteurs et prix techniques. L'actualité de l'Académie des César.">
+    <meta name="keywords" content="césar 2026, palmarès césar, académie des césar, cérémonie des césar, découvrir les lauréats, césar des lycéens, lire communiqué">
+    
+    <!-- Favicon - César 2026 (CORRECTED) -->
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="msapplication-TileColor" content="#1a1a2e">
+<meta name="msapplication-TileImage" content="favicon.png">  <!-- Changed from mstile-150x150.png -->
+<meta name="theme-color" content="#1a1a2e">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cesar2026.vercel.app">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: #ffd700;
+            font-size: 28px;
+            font-weight: 900;
+            font-family: 'Playfair Display', serif;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+        
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+        
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .dropdown-content a:hover {
+            background: #f5f5f5;
+            color: #ffd700;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 50px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .card-img {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .card-category {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ffd700;
+            color: #1a1a2e;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .card-content {
+            padding: 25px;
+        }
+        
+        .card-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .card-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Le Saviez-Vous Slider */
+        .facts-slider {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 40px 0;
+            margin: 50px 0;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slider-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .fact-slide {
+            display: none;
+            padding: 20px;
+        }
+        
+        .fact-slide.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fact-slide i {
+            font-size: 48px;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+        
+        .fact-slide h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .fact-slide p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .slider-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        .dot.active {
+            background: #ffd700;
+        }
+        
+        /* Interactive Palmarès */
+        .palmares-filter {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 50px 0;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+            padding: 10px 25px;
+            border: 2px solid #1a1a2e;
+            background: transparent;
+            color: #1a1a2e;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn.active {
+            background: #1a1a2e;
+            color: white;
+        }
+        
+        .winners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .winner-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .winner-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .winner-icon {
+            width: 50px;
+            height: 50px;
+            background: #ffd700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+        
+        /* Social Sidebar */
+        .social-sidebar {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+        
+        .social-sidebar a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            margin: 10px 0;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .social-sidebar a:hover {
+            transform: scale(1.2) rotate(360deg);
+        }
+        
+        /* Backlinks Section */
+        .backlinks-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            margin: 50px 0;
+            border-radius: 20px;
+        }
+        
+        .backlinks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .backlink-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+        
+        .backlink-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .backlink-card a {
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #ffd700;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+        
+        /* PDF Communiqué Button */
+        .pdf-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffd700;
+            color: #1a1a2e;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 0;
+            transition: all 0.3s;
+        }
+        
+        .pdf-button:hover {
+            background: #1a1a2e;
+            color: #ffd700;
+            transform: scale(1.05);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .social-sidebar {
+                left: 10px;
+            }
+            
+            .social-sidebar a {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Social Sidebar -->
+    <div class="social-sidebar">
+        <a href="https://instagram.com/tearswithhanan/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@pathan_x_babarian565" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://facebook.com/HananIrfan001" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/hananirfan91" target="_blank" title="Twitter/X"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/@ancientmystery-0" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">CÉSAR 2026</a>
+            <div class="nav-links">
+                <a href="#accueil">Accueil</a>
+                <div class="dropdown">
+                    <a href="#palmares">Palmarès <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="meilleur-film.html">Meilleur Film</a>
+                        <a href="meilleur-realisateur.html">Meilleur Réalisateur</a>
+                        <a href="meilleur-acteur.html">Meilleurs Acteurs</a>
+                     
+                    </div>
+                </div>
+                <a href="analyses.html">Analyses</a>
+                <a href="news.html">Actualités</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>La 51e Cérémonie des César</h1>
+            <p>Découvrez le palmarès complet, les analyses exclusives et les coulisses de la nuit du cinéma français. Une cérémonie historique avec 8 récompenses pour 5 films soutenus par la Région Île-de-France.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- Interactive Palmarès Filter -->
+        <section class="palmares-filter">
+            <h2 style="text-align: center; margin-bottom: 30px;">🏆 Palmarès Interactif des César 2026</h2>
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="film">Films</button>
+                <button class="filter-btn" data-filter="acteur">Acteurs</button>
+                <button class="filter-btn" data-filter="technique">Technique</button>
+            </div>
+            <div class="winners-grid" id="winnersGrid">
+                <!-- Winners will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Featured Cards Grid -->
+        <div class="cards-grid">
+            <!-- Card 1: Meilleur Film -->
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                    <span class="card-category">Meilleur Film</span>
+                </div>
+                <div class="card-content">
+                    <h3>L'Attachement</h3>
+                    <p>Découvrez l'analyse complète du film de Carine Tardieu, sacré meilleur film de l'année. Une œuvre poignante sur les liens humains dans une société divisée.</p>
+                    <a href="https://cineuropa.org/en/interview/466477/" class="btn">Lire l'analyse complète</a>
+                </div>
+            </div>
+
+            <!-- Card 2: Richard Linklater -->
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                    <span class="card-category">Meilleur Réalisateur</span>
+                </div>
+                <div class="card-content">
+                    <h3>Richard Linklater</h3>
+                    <p>Premier Américain à remporter le César de la meilleure réalisation pour "Nouvelle Vague". Analyse de son hommage à Godard et à la Nouvelle Vague française.</p>
+                    <a href="https://www.lemonde.fr/culture/live/2026/02/26/en-direct-cesars-2026-jim-carrey-recoit-un-cesar-d-honneur-vimala-pons-sacree-meilleure-actrice-dans-un-second-role_6668415_3246.html" class="btn">Découvrir le parcours</a>
+                </div>
+            </div>
+
+            <!-- Card 3: César des Lycéens -->
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                    <span class="card-category">César des Lycéens</span>
+                </div>
+                <div class="card-content">
+                    <h3>Le Vote des Jeunes</h3>
+                    <p>Découvrez le lauréat du César des Lycéens 2026. Comment les 2000 lycéens ont-ils choisi leur film ? Analyse du processus de vote à la Sorbonne.</p>
+                    <a href="https://www.sortiraparis.com/en/what-to-do-in-paris/cinema-series/articles/271754-cesar-2026-discover-the-full-list-of-winners-from-this-51st-ceremony" class="btn">Lire le communiqué PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PDF Communiqué Section -->
+        <div style="text-align: center;">
+            <a href="https://www.indiewire.com/features/general/french-film-academy-members-overhaul-cesar-awards-1202210702/" class="pdf-button">
+                <i class="fas fa-file-pdf"></i>
+                Lire le communiqué officiel de l'Académie des César
+            </a>
+        </div>
+
+        <!-- Le Saviez-Vous? Slider -->
+        <section class="facts-slider">
+            <div class="slider-container">
+                <div class="fact-slide active">
+                    <i class="fas fa-film"></i>
+                    <h3>Le Saviez-Vous ?</h3>
+                    <p>5 films soutenus par la Région Île-de-France ont remporté 8 César lors de la cérémonie 2026, dont le prestigieux César du Meilleur Film pour "L'Attachement".</p>
+                </div>
+                <div class="fact-slide">
+                    <i class="fas fa-globe"></i>
+                    <h3>Une Première Historique</h3>
+                    <p>Richard Linklater est devenu le premier réalisateur américain à remporter le César de la meilleure réalisation pour son film "Nouvelle Vague".</p>
+                </div>
+                <div class="fact-slide">
+                    <i class="fas fa-star"></i>
+                    <h3>César d'Honneur</h3>
+                    <p>Jim Carrey a reçu un César d'honneur pour l'ensemble de sa carrière lors de cette 51e cérémonie.</p>
+                </div>
+                <div class="fact-slide">
+                    <i class="fas fa-users"></i>
+                    <h3>César des Lycéens</h3>
+                    <p>Plus de 2000 lycéens ont voté pour leur film préféré lors d'une cérémonie spéciale à la Sorbonne.</p>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <!-- Backlinks Section -->
+        <section class="backlinks-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 20px;">Découvrez Nos Projets</h2>
+                <div class="backlinks-grid">
+                    <div class="backlink-card">
+                        <i class="fas fa-code" style="font-size: 40px; margin-bottom: 15px;"></i>
+                        <h3>Digital Agency</h3>
+                        <a href="https://hidigitalgroup.vercel.app/" target="_blank">HiDigital Group →</a>
+                    </div>
+                    <div class="backlink-card">
+                        <i class="fas fa-user" style="font-size: 40px; margin-bottom: 15px;"></i>
+                        <h3>Portfolio</h3>
+                        <a href="https://hananirfanportfolio.vercel.app/" target="_blank">Hanan Irfan →</a>
+                    </div>
+                    <div class="backlink-card">
+                        <i class="fas fa-book" style="font-size: 40px; margin-bottom: 15px;"></i>
+                        <h3>Hadith Wisdom</h3>
+                        <a href="https://hadithwisdomhub0.vercel.app/" target="_blank">Hadith Hub →</a>
+                    </div>
+                    <div class="backlink-card">
+                        <i class="fas fa-blog" style="font-size: 40px; margin-bottom: 15px;"></i>
+                        <h3>AI Blog</h3>
+                        <a href="https://aiblogs0.vercel.app/" target="_blank">AI Insights →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>César 2026</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="meilleur-film.html">Palmarès</a></li>
+                        <li><a href="news.html">Actualités</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <ul>
+                        <li><a href="https://instagram.com/tearswithhanan/">Instagram</a></li>
+                        <li><a href="https://facebook.com/HananIrfan001">Facebook</a></li>
+                        <li><a href="https://x.com/hananirfan91">Twitter/X</a></li>
+                        <li><a href="https://tiktok.com/@pathan_x_babarian565">TikTok</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hananirfan91@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +92 310 6359 235</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 César 2026 - Tous droits réservés. Site créé par Hanan Irfan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Le Saviez-Vous? Slider
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.fact-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slideIndex = (n + slides.length) % slides.length;
+            slides[slideIndex].classList.add('active');
+            dots[slideIndex].classList.add('active');
+        }
+
+        function currentSlide(n) {
+            showSlide(n);
+        }
+
+        // Auto-advance slides every 5 seconds
+        setInterval(() => {
+            showSlide(slideIndex + 1);
+        }, 5000);
+
+        // Interactive Palmarès Filter
+        const winners = [
+            { category: 'film', name: 'L\'Attachement', prize: 'Meilleur Film', icon: '🎬' },
+            { category: 'film', name: 'Nouvelle Vague', prize: 'Meilleure Réalisation', icon: '🎥' },
+            { category: 'acteur', name: 'Laurent Lafitte', prize: 'Meilleur Acteur', icon: '🎭' },
+            { category: 'acteur', name: 'Léa Drucker', prize: 'Meilleure Actrice', icon: '🎭' },
+            { category: 'acteur', name: 'Vimala Pons', prize: 'Meilleur Second Rôle', icon: '⭐' },
+            { category: 'technique', name: 'Catherine Cosme', prize: 'Meilleurs Décors', icon: '🎨' },
+            { category: 'technique', name: 'Arnaud Toulon', prize: 'Meilleure Musique', icon: '🎵' },
+            { category: 'technique', name: 'Lise Fischer', prize: 'Meilleurs Effets Visuels', icon: '✨' }
+        ];
+
+        const winnersGrid = document.getElementById('winnersGrid');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        function displayWinners(filter = 'all') {
+            winnersGrid.innerHTML = '';
+            const filteredWinners = filter === 'all' ? winners : winners.filter(w => w.category === filter);
+            
+            filteredWinners.forEach(winner => {
+                const winnerItem = document.createElement('div');
+                winnerItem.className = 'winner-item';
+                winnerItem.innerHTML = `
+                    <div class="winner-icon">${winner.icon}</div>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">${winner.name}</h4>
+                        <p style="color: #666;">${winner.prize}</p>
+                    </div>
+                `;
+                winnersGrid.appendChild(winnerItem);
+            });
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                displayWinners(button.dataset.filter);
+            });
+        });
+
+        // Initial display
+        displayWinners();
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+    <!-- Additional Pages (Hidden but accessible via navigation) -->
+    <!-- These would be separate HTML files in a real implementation -->
+    <!-- 
+        meilleur-film.html - Detailed analysis of L'Attachement
+        meilleur-realisateur.html - Richard Linklater profile
+        meilleur-acteur.html - All acting winners
+        prix-techniques.html - Technical awards deep dive
+        cesar-lyceens.html - César des Lycéens coverage
+    -->
+</body>
+</html>

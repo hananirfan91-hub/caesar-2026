@@ -9,17 +9,18 @@
     <meta name="keywords" content="césar 2026, palmarès césar, académie des césar, cérémonie des césar, découvrir les lauréats, césar des lycéens, lire communiqué">
     
     <!-- Favicon - César 2026 (CORRECTED) -->
-<link rel="icon" type="image/x-icon" href="favicon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-<link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
-<link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
-<link rel="manifest" href="site.webmanifest">
-<meta name="msapplication-TileColor" content="#1a1a2e">
-<meta name="msapplication-TileImage" content="favicon.png">  <!-- Changed from mstile-150x150.png -->
-<meta name="theme-color" content="#1a1a2e">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="msapplication-TileColor" content="#1a1a2e">
+    <meta name="msapplication-TileImage" content="favicon.png">
+    <meta name="theme-color" content="#1a1a2e">
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://cesar2026.vercel.app">
     
@@ -136,13 +137,11 @@
             color: #ffd700;
         }
         
-        /* Hero Section */
+        /* Hero Section with Video */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: white;
-            padding: 100px 0;
+            padding: 60px 0;
             text-align: center;
         }
         
@@ -153,9 +152,25 @@
         }
         
         .hero p {
-            font-size: 20px;
+            font-size: 18px;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 30px auto 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border: 3px solid #ffd700;
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            display: block;
         }
         
         /* Cards Grid */
@@ -420,6 +435,27 @@
             font-weight: 600;
         }
         
+        /* PDF Button */
+        .pdf-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffd700;
+            color: #1a1a2e;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 0;
+            transition: all 0.3s;
+        }
+        
+        .pdf-button:hover {
+            background: #1a1a2e;
+            color: #ffd700;
+            transform: scale(1.05);
+        }
+        
         /* Footer */
         footer {
             background: #1a1a2e;
@@ -466,27 +502,6 @@
             color: #999;
         }
         
-        /* PDF Communiqué Button */
-        .pdf-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #ffd700;
-            color: #1a1a2e;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 20px 0;
-            transition: all 0.3s;
-        }
-        
-        .pdf-button:hover {
-            background: #1a1a2e;
-            color: #ffd700;
-            transform: scale(1.05);
-        }
-        
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -506,6 +521,10 @@
                 height: 40px;
                 line-height: 40px;
                 font-size: 14px;
+            }
+            
+            .video-container iframe {
+                height: 250px;
             }
         }
     </style>
@@ -532,7 +551,6 @@
                         <a href="meilleur-film.html">Meilleur Film</a>
                         <a href="meilleur-realisateur.html">Meilleur Réalisateur</a>
                         <a href="meilleur-acteur.html">Meilleurs Acteurs</a>
-                     
                     </div>
                 </div>
                 <a href="analyses.html">Analyses</a>
@@ -542,11 +560,22 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Embedded YouTube Video -->
     <section class="hero">
         <div class="container">
             <h1>La 51e Cérémonie des César</h1>
             <p>Découvrez le palmarès complet, les analyses exclusives et les coulisses de la nuit du cinéma français. Une cérémonie historique avec 8 récompenses pour 5 films soutenus par la Région Île-de-France.</p>
+            
+            <!-- YouTube Video Embed -->
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/jtrM3NaUXnk" 
+                    title="César 2026 - Vidéo Promotionnelle" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </section>
 
@@ -791,15 +820,5 @@
             });
         });
     </script>
-
-    <!-- Additional Pages (Hidden but accessible via navigation) -->
-    <!-- These would be separate HTML files in a real implementation -->
-    <!-- 
-        meilleur-film.html - Detailed analysis of L'Attachement
-        meilleur-realisateur.html - Richard Linklater profile
-        meilleur-acteur.html - All acting winners
-        prix-techniques.html - Technical awards deep dive
-        cesar-lyceens.html - César des Lycéens coverage
-    -->
 </body>
 </html>
